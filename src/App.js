@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Route, Switch, withRouter} from 'react-router-dom';
 import Homepage from './Web-Pages/Homepage';
+import PatchedChampionsPage from './Web-Pages/PatchedChampionsPage';
 import './App.css';
 
 class App extends Component {
@@ -13,6 +14,8 @@ class App extends Component {
     switch(this.state.currentPage) {
       case "Homepage":
         return <Homepage />
+      case "Champions":
+        return <PatchedChampionsPage />
       default:
         return <Homepage />
     }
@@ -22,7 +25,8 @@ class App extends Component {
     return (
       <div>
         <Switch>
-          <Route path="Home" component={Homepage} />
+          <Route exact path="/Champions" component={PatchedChampionsPage} />
+          <Route exact path="/" component={Homepage} />
         </Switch>
         {this.webpageHandler()}
       </div>
