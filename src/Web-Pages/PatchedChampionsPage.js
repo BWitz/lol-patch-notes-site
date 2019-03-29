@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Carousel from '../Components/Containers/Carousel';
 import "../App.css";
 
 export default class PatchedChampionsPage extends Component {
@@ -24,7 +25,10 @@ export default class PatchedChampionsPage extends Component {
     render() {
         console.log(this.state.champions)
         return (
-            <p>Test</p>
+            <div>
+                <p>Champions Page Test</p>
+                <Carousel champions={this.state.champions} />
+            </div>
         )
     }
 }

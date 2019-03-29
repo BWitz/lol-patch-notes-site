@@ -6,21 +6,6 @@ import './App.css';
 
 class App extends Component {
 
-  state = {
-    currentPage: "Homepage"
-  }
-
-  webpageHandler = () => {
-    switch(this.state.currentPage) {
-      case "Homepage":
-        return <Homepage />
-      case "Champions":
-        return <PatchedChampionsPage />
-      default:
-        return <Homepage />
-    }
-  }
-
   render() {
     return (
       <div>
@@ -28,7 +13,6 @@ class App extends Component {
           <Route exact path="/Champions" component={PatchedChampionsPage} />
           <Route exact path="/" component={Homepage} />
         </Switch>
-        {this.webpageHandler()}
       </div>
     );
   }
