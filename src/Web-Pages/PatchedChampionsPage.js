@@ -23,7 +23,7 @@ export default class PatchedChampionsPage extends Component {
     }
 
     render() {
-        console.log(this.state.champions)
+        console.log(this.state)
         return (
             <div>
                 <p>Champions Page Test</p>
